@@ -7,11 +7,12 @@ addIcon = addIcon.addEventListener('click', function()
         alert("Todo can't be empty!");
     }else{
         let newElement = document.createElement("li");
-        newElement.innerHTML = `${inputs.value} <i class="fa-solid fa-trash"></i>`;
+        newElement.innerHTML = `${inputs.value} <img src="icons/deleted.png">`;
+        newElement.querySelector("img").className="deleted";
         console.log(newElement);
         text.appendChild(newElement);
         inputs.value="";
-        newElement.querySelector("i").addEventListener("click", remove);
+        newElement.querySelector("img").addEventListener("click", remove);
         newElement.onclick = function(){
             newElement.classList.toggle('completd')
         }
