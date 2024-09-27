@@ -7,7 +7,7 @@ addIcon = addIcon.addEventListener('click', function()
         alert("Todo can't be empty!");
     }else{
         let newElement = document.createElement("li");
-        newElement.innerHTML = `${inputs.value} <img src="icons/deleted.png">`;
+        newElement.innerHTML = `${inputs.value} <img src="icons/deleted.png" width = "25px" title="delete">`;
         newElement.querySelector("img").className="deleted";
         console.log(newElement);
         text.appendChild(newElement);
