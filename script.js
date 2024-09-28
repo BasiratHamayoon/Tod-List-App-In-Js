@@ -3,7 +3,7 @@ let text = document.querySelector('.tasks');
 var addIcon = document.getElementById('image-icon')
 addIcon = addIcon.addEventListener('click', function()
  {
-    if(inputs.value == ""){
+    if(inputs.value.trim() == ""){
         alert("Todo can't be empty!");
     }else{
         let newElement = document.createElement("li");
